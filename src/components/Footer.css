@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--color-surface);
+    color: var(--color-text-muted);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    /* Brand | Shop | Support | Newsletter */
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-section h3 {
+    color: var(--color-text-main);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.footer-logo {
+    font-family: var(--font-family-display);
+    font-size: 2rem;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-section ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.footer-section a:hover {
+    color: var(--color-primary);
+    padding-left: 4px;
+    /* subtle shift */
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    display: flex;
+    margin-top: var(--spacing-sm);
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid var(--color-background);
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    background: var(--color-background);
+    color: var(--color-text-main);
+}
+
+.newsletter-form input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.newsletter-form button {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0 1.5rem;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-weight: 600;
+    transition: opacity var(--transition-fast);
+}
+
+.newsletter-form button:hover {
+    opacity: 0.9;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.social-icons a {
+    color: var(--color-text-muted);
+    transition: color var(--transition-fast);
+    font-weight: 700;
+}
+
+.social-icons a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Tablet/Mobile Responsive */
+@media (max-width: 992px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        /* Stack everything */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+}
